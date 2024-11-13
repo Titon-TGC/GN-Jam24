@@ -22,7 +22,7 @@ public class Playermovement : MonoBehaviour
     {
         body.velocity = new Vector2(Player_move.x * movespeed, Player_move.y * movespeed);
 
-        Vector2 aim = Mouse_point - Player_move.position;
+        Vector2 aim = Mouse_point - body.position;
         float aimangle = Mathf.Atan2(aim.y,aim.x) * Mathf.Rad2Deg - 90f;
         body.rotation = aimangle;
     }
