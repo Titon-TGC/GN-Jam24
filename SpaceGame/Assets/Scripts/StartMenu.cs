@@ -28,6 +28,5 @@ public class StartMenu : MonoBehaviour
     public void ExitGame() // Accessed through the Exit button, and triggered when clicked
     {
         Application.Quit(); // Quits game (Only in built version)
-        UnityEditor.EditorApplication.isPlaying = false; // Quits game (Only in Editor)
     }
 }
