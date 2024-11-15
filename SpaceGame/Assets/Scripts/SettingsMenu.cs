@@ -10,6 +10,8 @@ public class SettingsMenu : MonoBehaviour
     public AudioMixer musicMixer;
     public AudioMixer sfxMixer;
 
+    public GameObject menu;
+
     public Dropdown resolutionDropdown;
 
     Resolution[] resolutions;
@@ -57,7 +59,9 @@ public class SettingsMenu : MonoBehaviour
 
     public void BackButtonClick()
     {
-        SceneManager.LoadScene("StartMenu");
+        gameObject.SetActive(false);
+        menu.SetActive(true);
+
     }
 
     public void SetFullscreen(bool isFullscreen)
