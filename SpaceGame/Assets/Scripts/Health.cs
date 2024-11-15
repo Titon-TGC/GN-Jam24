@@ -21,7 +21,7 @@ public class Health : MonoBehaviour
         }
     }
 
-    public void Heal(int amount) //Heal function to be called from other scripts. (NOT TESTED IDK IF THIS WORKS)
+    public void Heal(int amount) //Heal function to be called from other scripts.
     {
         currentHealth += amount; // Current health + heal amount from other scripts.
         if(currentHealth > maxHealth) // If current health is greater than max health.

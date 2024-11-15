@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Space Game - Alien Frog 1_0: -530252585808821243
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

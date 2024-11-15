@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 256119cb514edc14bbfaffe1c7c125ad
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Kleptocracy Titling
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 14fbde41008732e439df363795cdce47, type: 3}
+  - {fileID: 12800000, guid: 71ccbf3347ac37e45bb59ed893a55e14, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
