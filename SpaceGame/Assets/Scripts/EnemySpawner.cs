@@ -19,12 +19,19 @@ public class WaveSpawner : MonoBehaviour
     private float spawnInterval;
     private float spawnTimer;
     public float levelWaveMax;
+
+    private LevelManager endWave;
  
     public List<GameObject> spawnedEnemies = new List<GameObject>(); // list of spawned enemies
     // Start is called before the first frame update
     void Start()
     {
         GenerateWave();
+    }
+
+    private void Awake()
+    {
+        endWave = FindFirstObjectByType<LevelManager>();
     }
  
     // Update is called once per frame
@@ -63,14 +70,14 @@ public class WaveSpawner : MonoBehaviour
         if(waveTimer<=0 && spawnedEnemies.Count <=0)
         {
             currWave++;
-            //if (currWave > levelWaveMax)
-            //{
-                // I want to put the level end function here
-            //}
-            //else
-            //{
+            if (currWave > levelWaveMax)
+            {
+                endWave.GameEnd();
+            }
+            else
+            {
                 GenerateWave();
-            //}
+            }
         }
     }
  

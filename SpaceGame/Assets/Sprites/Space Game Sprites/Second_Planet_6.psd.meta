@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c10c339c4af662649aa82e44fa76e4d5
+guid: 646fb853ac6c3c644a2304b045348949
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4105078040014067509
-    second: First_Planet_5_0
+      213: -6588261331423177171
+    second: Second_Planet_6_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: First_Planet_5_0
+      name: Second_Planet_6_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 5
-        width: 123
-        height: 127
+        x: 5
+        y: 10
+        width: 189
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5379b4e4aba28f830800000000000000
-      internalID: 4105078040014067509
+      spriteID: d265415a93bc194a0800000000000000
+      internalID: -6588261331423177171
       vertices: []
       indices: 
       edges: []
@@ -128,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      First_Planet_5_0: 4105078040014067509
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
