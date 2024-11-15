@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firepoint: {fileID: 513482333245034681}
-  bulletPrefab: {fileID: 7504674222123230432, guid: 30c4f10284a07d04d94c4e8ee08cadcb, type: 3}
+  bulletPrefab: {fileID: 693393214602516594, guid: 6967a1fd2497ac14194785f6aef72b78, type: 3}
   bulletForce: 20
 --- !u!114 &3882684876967761375
 MonoBehaviour:
@@ -107,6 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 100
+  levelManager: {fileID: 0}
 --- !u!1 &4848002429477086992
 GameObject:
   m_ObjectHideFlags: 0

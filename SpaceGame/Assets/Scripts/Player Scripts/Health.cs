@@ -7,12 +7,16 @@ public class Health : MonoBehaviour
     public int maxHealth = 100; //Players max health
     public int currentHealth = 100; //Players current health
 
-    public GameObject levelManager;
+    private LevelManager playerRespawn;
 
     void Start() //Runs once scene is active
     {
         currentHealth = maxHealth; //Sets players current health to the max health.
-        levelManager = GameObject.Find("LevelManager");
+    }
+
+    private void Awake()
+    {
+        playerRespawn = FindFirstObjectByType<LevelManager>();
     }
 
     public void TakeDamage(int amount) //Take Damage function to be called from other scripts.
@@ -20,7 +24,7 @@ public class Health : MonoBehaviour
         currentHealth -= amount; //Current health - damage amount from other scripts.
         if(currentHealth <= 0) // If current health is less than or = 0
         {
-            levelManager.GetComponent<LevelManager>().Respawn();
+            playerRespawn.Respawn();
             Destroy(gameObject);
         }
     }
