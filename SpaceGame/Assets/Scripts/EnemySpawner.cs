@@ -6,10 +6,10 @@ public class WaveSpawner : MonoBehaviour
 {
 
    
-    public List<Enemy> enemies = new List<Enemy>();
-    public int currWave;
-    private int waveValue;
-    public List<GameObject> enemiesToSpawn = new List<GameObject>();
+    public List<Enemy> enemies = new List<Enemy>(); //List of enemy prefabs set in inspector
+    public int currWave; //current wave number
+    private int waveValue; // credit value for wave
+    public List<GameObject> enemiesToSpawn = new List<GameObject>(); // list of enemies still yet to spawn
  
     public Transform[] spawnLocation;
     public int spawnIndex;
@@ -18,8 +18,9 @@ public class WaveSpawner : MonoBehaviour
     private float waveTimer;
     private float spawnInterval;
     private float spawnTimer;
+    public float levelWaveMax;
  
-    public List<GameObject> spawnedEnemies = new List<GameObject>();
+    public List<GameObject> spawnedEnemies = new List<GameObject>(); // list of spawned enemies
     // Start is called before the first frame update
     void Start()
     {
@@ -62,7 +63,14 @@ public class WaveSpawner : MonoBehaviour
         if(waveTimer<=0 && spawnedEnemies.Count <=0)
         {
             currWave++;
-            GenerateWave();
+            //if (currWave > levelWaveMax)
+            //{
+                // I want to put the level end function here
+            //}
+            //else
+            //{
+                GenerateWave();
+            //}
         }
     }
  
