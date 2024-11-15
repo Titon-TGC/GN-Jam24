@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public Camera Cam;
+    public int damageAmount;
 
     private void Awake()
     {
@@ -18,7 +19,11 @@ public class Bullet : MonoBehaviour
     
     void OnCollisionEnter2D(Collision2D collision)
     {
-        
+         if (collision.gameObject.GetComponent<EnemyMovement>())
+        {
+            var healthController = collision.gameObject.GetComponent<Enemy_Health1>();
+            healthController.DeltDamage(damageAmount);
+        }
         Destroy(gameObject);
         
     }

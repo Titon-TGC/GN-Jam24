@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class Shiphealth : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int maxHealth = 100; //Players max health
+    public int currentHealth = 100; //Players current health
+
+    void Start() //Runs once scene is active
     {
-        
+        currentHealth = maxHealth; //Sets players current health to the max health.
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ShipDamage(int amount) //Take Damage function to be called from other scripts.
     {
-        
+        currentHealth -= amount; //Current health - damage amount from other scripts.
+        if(currentHealth <= 0) // If current health is less than or = 0
+        {
+            Debug.Log("You ded"); //Debug log for now
+        }
     }
+
 }
