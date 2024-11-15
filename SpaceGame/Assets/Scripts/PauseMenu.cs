@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
+    public static bool GameIsPaused = false;
+
     public GameObject pauseMenu;
     public GameObject options;
 
@@ -18,6 +20,7 @@ public class PauseMenu : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             pauseMenu.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 
@@ -36,6 +39,7 @@ public class PauseMenu : MonoBehaviour
     public void OnResumeClick()
     {
         pauseMenu.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     public void OnExitClick()
