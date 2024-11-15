@@ -6,6 +6,11 @@ public class TempButtons : MonoBehaviour
 {
     public GameObject Player;
 
+    private void Update()
+    {
+        Player = GameObject.FindGameObjectWithTag("Player");
+    }
+
     public void Damage()
     {
         Debug.Log("Player hit!");
