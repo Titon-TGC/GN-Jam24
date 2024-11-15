@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 2727741244387100090}
   - component: {fileID: 4101372845064375082}
   - component: {fileID: 8426461518360548212}
+  - component: {fileID: 393466511325033980}
   m_Layer: 0
   m_Name: Spider
   m_TagString: Untagged
@@ -202,3 +203,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   currentHealth: 3
+  OnDied:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 393466511325033980}
+        m_TargetAssemblyTypeName: EnemyDrop, Assembly-CSharp
+        m_MethodName: RandomlyDropCollectable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &393466511325033980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4589578053961194643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 077b27969f4f03e49bcd3f03e3270726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _chanceOfCollectableDrop: 0

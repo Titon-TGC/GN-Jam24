@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Enemy_Health1 : MonoBehaviour
 {
     public int maxHealth = 100; //Enemy max health
     public int currentHealth = 100; //Enemy current health
+    public UnityEvent OnDied;
 
     void Awake() //Runs once object is active
     {
@@ -17,6 +19,7 @@ public class Enemy_Health1 : MonoBehaviour
         currentHealth -= amount; //Current health - damage amount from other scripts.
         if(currentHealth <= 0) // If current health is less than or = 0
         {
+            OnDied.Invoke();
             Destroy(gameObject);
         }
     }
