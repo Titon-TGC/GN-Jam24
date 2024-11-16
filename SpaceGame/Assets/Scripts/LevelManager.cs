@@ -12,7 +12,31 @@ public class LevelManager : MonoBehaviour
     public GameObject ship;
     public GameObject playerStats;
     public GameObject endScreen;
+    public Text scoreText;
+    public Text endText;
     public int deaths = 0;
+    private bool lost;
+    private int finalScore;
+
+    void Start()
+    {
+        endScreen.SetActive(false);
+        lost = false;
+    }
+
+    void Update()
+    {
+        if(ship.GetComponent<Shiphealth>().currentHealth <= 0)
+        {
+            lost = true;
+            GameEnd();
+        }
+
+        if(finalScore <= 0)
+        {
+            finalScore = 0;
+        }
+    }
 
     public void Respawn()
     {
@@ -32,6 +56,24 @@ public class LevelManager : MonoBehaviour
 
     public void GameEnd()
     {
+        if(lost == true)
+        {
+            finalScore = score / 2;
+            endText.text = "You lose!";
+        }
+        else
+        {
+            finalScore = score;
+            endText.text = "You win!";
+        }
+        
+        endScreen.SetActive(true);
+        Time.timeScale = 0f;
+        scoreText.text = finalScore.ToString();
+    }
 
+    public void Leave()
+    {
+        SceneManager.LoadScene("LevelMenu");
     }
 }

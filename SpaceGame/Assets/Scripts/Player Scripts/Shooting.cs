@@ -6,11 +6,22 @@ public class Shooting : MonoBehaviour
 {
     public Transform firepoint;
 	public GameObject bulletPrefab;
+	private GameObject pauseMenu;
+	private GameObject pauseChild;
+	private GameObject levelManager;
+	private GameObject endScreen;
+
 	
 	public float bulletForce = 20f;
     void Update()
     {
-        if(Input.GetButtonDown("Fire1"))
+		pauseMenu = GameObject.Find("PauseMenu");
+		pauseChild = pauseMenu.transform.Find("Pause Menu").gameObject;
+
+		levelManager = GameObject.Find("LevelManager");
+		endScreen = levelManager.transform.Find("EndScreen").gameObject;
+
+        if(Input.GetButtonDown("Fire1") && pauseChild.activeSelf == false && endScreen.activeSelf == false)
 		{
 			Shoot();
 		}
