@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3882684876967761375}
   m_Layer: 0
   m_Name: Player 1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,7 +35,7 @@ Transform:
   - {fileID: 513482333245034681}
   - {fileID: 5673000326050627971}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &4660015925701185221
 Rigidbody2D:
@@ -107,7 +107,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 100
-  levelManager: {fileID: 0}
 --- !u!1 &4848002429477086992
 GameObject:
   m_ObjectHideFlags: 0

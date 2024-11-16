@@ -18,14 +18,38 @@ public class LevelManager : MonoBehaviour
     private bool lost;
     private int finalScore;
 
+    public int shipHP;
+    public int hP;
+
+    public Text scoreUI;
+    public Text shipHPText;
+    public Text hPText;
+
+    private GameObject player;
+
     void Start()
     {
         endScreen.SetActive(false);
         lost = false;
     }
 
+    private void RespawnPlayer()
+    {
+        GameObject player = Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation);
+    }
+
     void Update()
     {
+        shipHP = ship.GetComponent<Shiphealth>().currentHealth;
+        shipHPText.text = shipHP.ToString();
+
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        hP = player.GetComponent<Health>().currentHealth;
+        hPText.text = hP.ToString();
+
+        scoreUI.text = score.ToString();
+
         if(ship.GetComponent<Shiphealth>().currentHealth <= 0)
         {
             lost = true;
@@ -42,11 +66,6 @@ public class LevelManager : MonoBehaviour
     {
         Invoke("RespawnPlayer", 5f);
         deaths += 1;
-    }
-
-    private void RespawnPlayer()
-    {
-        GameObject player = Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation);
     }
 
     public void AddPoints(int amount)

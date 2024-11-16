@@ -5350,7 +5350,7 @@ MonoBehaviour:
   popUpText: {fileID: 729088330}
   Distance: 0
   distanceNeeded: 2
-  scene: StartMenu
+  scene: Level1
   text: {fileID: 1741192602}
   button: {fileID: 680832731}
 --- !u!212 &729088328

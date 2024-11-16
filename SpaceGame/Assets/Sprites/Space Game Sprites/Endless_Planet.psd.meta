@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Endless_Planet_0: -2313975057085505246
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
