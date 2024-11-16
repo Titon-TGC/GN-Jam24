@@ -14,7 +14,7 @@ public class TempButtons : MonoBehaviour
     public void Damage()
     {
         Debug.Log("Player hit!");
-        Player.GetComponent<Health>().TakeDamage(10);
+        Player.GetComponent<Shiphealth>().ShipDamage(10);
     }
 
     public void Heal()
