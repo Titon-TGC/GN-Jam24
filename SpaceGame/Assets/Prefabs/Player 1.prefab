@@ -108,6 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 100
+  levelManager: {fileID: 0}
 --- !u!61 &5062256115094356520
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -255,8 +256,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 457910171
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -5382960055062473531, guid: e193082301db27740a4b7be93edb2d09, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
