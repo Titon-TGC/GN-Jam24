@@ -9,7 +9,6 @@ public class EnemyMovement : MonoBehaviour
     public float speed;
     private float playerdistance;
     private float shipdistance;
-    
 
     void Start()
     {
@@ -18,6 +17,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
+
         playerdistance = Vector2.Distance(transform.position, player.transform.position);
         Vector2 direction = player.transform.position - transform.position;
         direction.Normalize();
@@ -28,13 +28,11 @@ public class EnemyMovement : MonoBehaviour
         shipdirection.Normalize();
         float shipangle = Mathf.Atan2(shipdirection.y, shipdirection.x) * Mathf.Rad2Deg;
 
-        if (playerdistance <= shipdistance)
-        
+        if (playerdistance <= shipdistance && player.activeSelf)
         {
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
             transform.rotation = Quaternion.Euler(Vector3.forward * angle);
         }
-        
         else
         {
             transform.position = Vector2.MoveTowards(this.transform.position, ship.transform.position, speed * Time.deltaTime);
