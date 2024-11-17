@@ -21,6 +21,7 @@ public class WaveSpawner : MonoBehaviour
     public float levelWaveMax;
 
     private LevelManager endWave;
+    private GameObject player;
  
     public List<GameObject> spawnedEnemies = new List<GameObject>(); // list of spawned enemies
     // Start is called before the first frame update
@@ -34,13 +35,18 @@ public class WaveSpawner : MonoBehaviour
         endWave = FindFirstObjectByType<LevelManager>();
     }
  
+    void Update()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
         if(spawnTimer <=0)
         {
             //spawn an enemy
-            if(enemiesToSpawn.Count >0)
+            if(enemiesToSpawn.Count >0 && player.activeSelf == true)
             {
                 GameObject enemy = (GameObject)Instantiate(enemiesToSpawn[0], spawnLocation[spawnIndex].position,Quaternion.identity); // spawn first enemy in our list
                 enemiesToSpawn.RemoveAt(0); // and remove it
