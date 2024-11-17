@@ -159,8 +159,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 4814620620219835454, guid: 60847328a52310145af23a7f168ce5a5, type: 3}
-  ship: {fileID: 4187403498516318451, guid: d4ad2b785a9e8b2478b7c3acf9c9c130, type: 3}
-  speed: 2
+  ship: {fileID: 5089016403407120394, guid: c8dccbfec5c27774a860555006700df2, type: 3}
+  speed: 3
 --- !u!114 &207946117726440869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,7 +185,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d185fae5c839054ca1229e99dd9a34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
+  damageAmount: 2
 --- !u!114 &6899567330559862425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,8 +225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c883e51711ea1694697f5c79470b885a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
-  currentHealth: 3
+  maxHealth: 5
+  currentHealth: 5
   scoreDrop: 10
   OnDied:
     m_PersistentCalls:

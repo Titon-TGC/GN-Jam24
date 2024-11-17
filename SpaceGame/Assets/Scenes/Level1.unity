@@ -2091,11 +2091,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2380895471833187262, guid: 7509b76fc5f3531478d4f069bb70b2a9, type: 3}
       propertyPath: enemies.Array.data[0].cost
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2380895471833187262, guid: 7509b76fc5f3531478d4f069bb70b2a9, type: 3}
       propertyPath: enemies.Array.data[1].cost
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2380895471833187262, guid: 7509b76fc5f3531478d4f069bb70b2a9, type: 3}
       propertyPath: 'spawnLocation.Array.data[0]'

@@ -160,7 +160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 4814620620219835454, guid: 60847328a52310145af23a7f168ce5a5, type: 3}
   ship: {fileID: 4187403498516318451, guid: d4ad2b785a9e8b2478b7c3acf9c9c130, type: 3}
-  speed: 2
+  speed: 3
 --- !u!114 &457356693801950020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,8 +225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c883e51711ea1694697f5c79470b885a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
-  currentHealth: 3
+  maxHealth: 1
+  currentHealth: 1
   scoreDrop: 10
   OnDied:
     m_PersistentCalls:
