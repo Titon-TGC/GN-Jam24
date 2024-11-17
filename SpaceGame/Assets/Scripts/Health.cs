@@ -7,9 +7,7 @@ public class Health : MonoBehaviour
     public int maxHealth = 100; //Players max health
     public int currentHealth = 100; //Players current health
 
-<<<<<<< Updated upstream:SpaceGame/Assets/Scripts/Health.cs
     public GameObject levelManager;
-=======
     private int healthAdd;
     private int newHealth;
 
@@ -25,15 +23,11 @@ public class Health : MonoBehaviour
         newHealth = maxHealth + healthAdd;
         maxHealth = newHealth;
     }
->>>>>>> Stashed changes:SpaceGame/Assets/Scripts/Player Scripts/Health.cs
 
     void Start() //Runs once scene is active
     {
         currentHealth = maxHealth; //Sets players current health to the max health.
-<<<<<<< Updated upstream:SpaceGame/Assets/Scripts/Health.cs
         levelManager = GameObject.Find("LevelManager");
-=======
->>>>>>> Stashed changes:SpaceGame/Assets/Scripts/Player Scripts/Health.cs
     }
 
     public void TakeDamage(int amount) //Take Damage function to be called from other scripts.

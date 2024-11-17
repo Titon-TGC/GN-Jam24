@@ -29,21 +29,11 @@ public class LevelManager : MonoBehaviour
 
     void Update()
     {
-<<<<<<< Updated upstream:SpaceGame/Assets/LevelManager.cs
-        if(ship.GetComponent<Shiphealth>().currentHealth <= 0)
-        {
-            lost = true;
-            GameEnd();
-        }
-=======
-        shipHP = ship.GetComponent<Shiphealth>().currentHealth;
-        shipHPText.text = shipHP.ToString();
 
         hP = player.GetComponent<Health>().currentHealth;
         hPText.text = hP.ToString();
 
         scoreUI.text = score.ToString();
->>>>>>> Stashed changes:SpaceGame/Assets/Scripts/LevelManager.cs
 
         if(finalScore <= 0)
         {
