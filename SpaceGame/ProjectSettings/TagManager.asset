@@ -43,6 +43,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: UI
+    uniqueID: 3515325571
+    locked: 0
   - name: Planet
     uniqueID: 2830645093
     locked: 0
@@ -57,7 +60,4 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 457910171
-    locked: 0
-  - name: UI
-    uniqueID: 3515325571
     locked: 0

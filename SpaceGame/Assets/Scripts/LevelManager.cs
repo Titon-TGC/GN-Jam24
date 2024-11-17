@@ -9,8 +9,11 @@ public class LevelManager : MonoBehaviour
     public int score;
     public int hP;
     public int shP;
+    public int maxHealth;
+    public int newHealth;
     public GameObject playerPrefab;
     public Transform spawnPoint;
+    public Transform position;
     public GameObject ship;
     private GameObject player;
     public GameObject playerStats;
@@ -29,6 +32,7 @@ public class LevelManager : MonoBehaviour
         endScreen.SetActive(false);
         lost = false;
         player = GameObject.FindGameObjectWithTag("Player");
+        position = GameObject.FindGameObjectWithTag("Player").transform;
         playerStats = GameObject.Find("PlayerStats");
         playerStats.GetComponent<PlayerStats>().LoadPlayer();
         ship = GameObject.FindGameObjectWithTag("Ship");
@@ -58,7 +62,8 @@ public class LevelManager : MonoBehaviour
 
     private void RespawnPlayer()
     {
-        GameObject player = Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation);
+        player.GetComponent<Health>().Revive();
+        position = spawnPoint;
     }
 
     public void AddPoints(int amount)
@@ -84,5 +89,10 @@ public class LevelManager : MonoBehaviour
         playerStats.GetComponent<PlayerStats>().SavePlayer();
         Time.timeScale = 0f;
         scoreText.text = finalScore.ToString();
+    }
+
+    public void Continue()
+    {
+        SceneManager.LoadScene("LevelMenu");
     }
 }
