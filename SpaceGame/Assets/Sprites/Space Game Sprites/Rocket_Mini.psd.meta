@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Rocket_Mini_0: 3408024000513095984
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

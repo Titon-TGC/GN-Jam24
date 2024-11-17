@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Frog_1_0: 7492178108432033736
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

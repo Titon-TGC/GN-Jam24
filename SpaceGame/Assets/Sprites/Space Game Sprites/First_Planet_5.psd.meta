@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      First_Planet_5_0: 4105078040014067509
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
