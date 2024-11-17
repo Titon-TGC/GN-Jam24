@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 077b27969f4f03e49bcd3f03e3270726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _chanceOfCollectableDrop: 0
+  _chanceOfCollectableDrop: 0.15
 --- !u!61 &-7815957954772656945
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class Collectable : MonoBehaviour
         _collectableBehaviour = GetComponent<ICollectableBehaviour>();
     }
 
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var player = collision.GetComponent<Playermovement>();

@@ -7,11 +7,11 @@ public class EnemyDrop : MonoBehaviour
    [SerializeField]
     private float _chanceOfCollectableDrop;
 
-    private CollectableSpawner _collectableSpawner;
+    private GameObject _collectableSpawner;
 
     private void Awake()
     {
-        _collectableSpawner = FindFirstObjectByType<CollectableSpawner>();
+        _collectableSpawner = GameObject.Find("CollectableSpawner");
     }
 
     public void RandomlyDropCollectable()
@@ -20,7 +20,7 @@ public class EnemyDrop : MonoBehaviour
 
         if (_chanceOfCollectableDrop >= random)
         {
-            _collectableSpawner.SpawnCollectable(transform.position);
+            _collectableSpawner.GetComponent<CollectableSpawner>().SpawnCollectable(transform.position);
         }
     }
 }

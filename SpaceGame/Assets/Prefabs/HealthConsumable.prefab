@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1374010096600618213}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 926908210557464417}
@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -689549999
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -1501718569218758410, guid: 96436f1a29e268c42b992222f4fbabfa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -94,6 +94,8 @@ GameObject:
   m_Component:
   - component: {fileID: 926908210557464417}
   - component: {fileID: 686994062197587188}
+  - component: {fileID: 6845199386827043659}
+  - component: {fileID: 7177401585816373997}
   m_Layer: 0
   m_Name: HealthConsumable
   m_TagString: Untagged
@@ -163,3 +165,28 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &6845199386827043659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4854391508462611907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca74b9d80d7b484a83a33e650872138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7177401585816373997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4854391508462611907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52def15f3a694124db8c906ef9be9938, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amount: 5
