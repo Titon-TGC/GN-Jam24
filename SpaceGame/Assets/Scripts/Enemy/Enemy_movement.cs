@@ -13,7 +13,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     void Update()
@@ -28,7 +28,7 @@ public class EnemyMovement : MonoBehaviour
         shipdirection.Normalize();
         float shipangle = Mathf.Atan2(shipdirection.y, shipdirection.x) * Mathf.Rad2Deg;
 
-        if (playerdistance < shipdistance)
+        if (playerdistance <= shipdistance)
         
         {
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);

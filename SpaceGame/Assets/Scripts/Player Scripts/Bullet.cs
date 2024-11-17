@@ -6,10 +6,15 @@ public class Bullet : MonoBehaviour
 {
     public Camera Cam;
     public int damageAmount;
+    private int up1;
+    private GameObject PlayerStats;
 
     private void Awake()
     {
         Cam = Camera.main;
+        PlayerStats = GameObject.Find("PlayerStats");
+        up1 = PlayerStats.GetComponent<PlayerStats>().upgrade1Level;
+        damageAmount = up1;
     }
 
     private void Update()
