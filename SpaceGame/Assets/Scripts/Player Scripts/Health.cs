@@ -13,18 +13,20 @@ public class Health : MonoBehaviour
 
     private LevelManager playerRespawn;
     private GameObject PlayerStats;
+    private AudioSource audio;
+    public AudioClip damage;
+    public AudioClip death;
+    public AudioClip heal;
 
     void Awake()
     {
         playerRespawn = FindFirstObjectByType<LevelManager>();
+        audio = GetComponent<AudioSource>();
 
         PlayerStats = GameObject.Find("PlayerStats");
         healthAdd = PlayerStats.GetComponent<PlayerStats>().upgrade3Level;
         newHealth = maxHealth + healthAdd;
         maxHealth = newHealth;
-        print(newHealth);
-        print(healthAdd);
-        print(maxHealth);
     }
 
     void Start() //Runs once scene is active
@@ -36,9 +38,11 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int amount) //Take Damage function to be called from other scripts.
     {
-        currentHealth -= amount; //Current health - damage amount from other scripts.
+        currentHealth -= amount;
+        audio.PlayOneShot(damage); //Current health - damage amount from other scripts.
         if(currentHealth <= 0) // If current health is less than or = 0
         {
+            audio.PlayOneShot(death);
             levelManager.GetComponent<LevelManager>().Respawn();
             gameObject.SetActive(false);
         }
@@ -47,6 +51,7 @@ public class Health : MonoBehaviour
     public void Heal(int amount) //Heal function to be called from other scripts.
     {
         currentHealth += amount; // Current health + heal amount from other scripts.
+        audio.PlayOneShot(heal);
         if(currentHealth > maxHealth) // If current health is greater than max health.
         {
             currentHealth = maxHealth; //Set current health to max health.
