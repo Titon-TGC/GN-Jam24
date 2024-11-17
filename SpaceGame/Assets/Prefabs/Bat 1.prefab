@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6742577155483778228}
   - component: {fileID: 6030837367527372756}
+  - component: {fileID: 732475931191818551}
   m_Layer: 0
   m_Name: Bat_1_0
   m_TagString: Untagged
@@ -84,6 +85,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &732475931191818551
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3264911460237944143}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a46e6cbab64bc4b4d9ee865668a39cd1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7832156309191547030
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 077b27969f4f03e49bcd3f03e3270726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _chanceOfCollectableDrop: 0
+  _chanceOfCollectableDrop: 0.15
 --- !u!61 &1648925727895821806
 BoxCollider2D:
   m_ObjectHideFlags: 0
