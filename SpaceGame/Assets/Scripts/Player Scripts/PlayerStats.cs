@@ -24,6 +24,7 @@ public class PlayerStats : MonoBehaviour
     public void Awake()
     {
         LoadPlayer();
+        print(upgrade3Level);
     }
 
     public void AddToPoints(int amount)

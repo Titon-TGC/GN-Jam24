@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     public Camera Cam;
     public int damageAmount;
     private int up1;
+    private int afterUpgrade;
     private GameObject PlayerStats;
 
     private void Awake()
@@ -14,7 +15,8 @@ public class Bullet : MonoBehaviour
         Cam = Camera.main;
         PlayerStats = GameObject.Find("PlayerStats");
         up1 = PlayerStats.GetComponent<PlayerStats>().upgrade1Level;
-        damageAmount = up1;
+        afterUpgrade = damageAmount + up1;
+        damageAmount = afterUpgrade;
     }
 
     private void Update()

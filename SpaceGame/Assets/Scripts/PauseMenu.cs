@@ -9,7 +9,6 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenu;
     public GameObject options;
-    public string scene;
 
     void Start()
     {
@@ -42,10 +41,5 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
-    }
-
-    public void OnExitClick()
-    {
-        SceneManager.LoadScene(scene);
     }
 }

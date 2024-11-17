@@ -14,11 +14,6 @@ public class StartMenu : MonoBehaviour
         options.SetActive(false);
     }
 
-    public void StartGameClick() // Accessed through the StartGame button, and triggered when clicked
-    {
-        SceneManager.LoadScene("LevelMenu"); //  Switches Scene
-    }
-
     public void OptionsClick() // Accessed through the Options button, and triggered when clicked (Currently no options Menu)
     {
         gameObject.SetActive(false);

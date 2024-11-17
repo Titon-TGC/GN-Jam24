@@ -18,5 +18,6 @@ public class TransitionLoader : MonoBehaviour
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(3f);
         SceneManager.LoadScene(scene);
+        print(scene);
     }
 }

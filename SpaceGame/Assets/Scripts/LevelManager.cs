@@ -7,13 +7,19 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     public int score;
+    public int hP;
+    public int shP;
     public GameObject playerPrefab;
     public Transform spawnPoint;
     public GameObject ship;
+    private GameObject player;
     public GameObject playerStats;
     public GameObject endScreen;
     public Text scoreText;
     public Text endText;
+    public Text hPText;
+    public Text shPText;
+    public Text scoreUI;
     public int deaths = 0;
     public bool lost;
     private int finalScore;
@@ -25,13 +31,16 @@ public class LevelManager : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         playerStats = GameObject.Find("PlayerStats");
         playerStats.GetComponent<PlayerStats>().LoadPlayer();
+        ship = GameObject.FindGameObjectWithTag("Ship");
     }
 
     void Update()
     {
-
         hP = player.GetComponent<Health>().currentHealth;
         hPText.text = hP.ToString();
+
+        shP = ship.GetComponent<Shiphealth>().currentHealth;
+        shPText.text = shP.ToString();
 
         scoreUI.text = score.ToString();
 
@@ -75,10 +84,5 @@ public class LevelManager : MonoBehaviour
         playerStats.GetComponent<PlayerStats>().SavePlayer();
         Time.timeScale = 0f;
         scoreText.text = finalScore.ToString();
-    }
-
-    public void Leave()
-    {
-        SceneManager.LoadScene("LevelMenu");
     }
 }

@@ -22,6 +22,9 @@ public class Health : MonoBehaviour
         healthAdd = PlayerStats.GetComponent<PlayerStats>().upgrade3Level;
         newHealth = maxHealth + healthAdd;
         maxHealth = newHealth;
+        print(newHealth);
+        print(healthAdd);
+        print(maxHealth);
     }
 
     void Start() //Runs once scene is active
