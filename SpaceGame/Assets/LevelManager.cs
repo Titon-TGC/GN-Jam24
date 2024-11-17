@@ -15,22 +15,35 @@ public class LevelManager : MonoBehaviour
     public Text scoreText;
     public Text endText;
     public int deaths = 0;
-    private bool lost;
+    public bool lost;
     private int finalScore;
 
     void Start()
     {
         endScreen.SetActive(false);
         lost = false;
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerStats = GameObject.Find("PlayerStats");
+        playerStats.GetComponent<PlayerStats>().LoadPlayer();
     }
 
     void Update()
     {
+<<<<<<< Updated upstream:SpaceGame/Assets/LevelManager.cs
         if(ship.GetComponent<Shiphealth>().currentHealth <= 0)
         {
             lost = true;
             GameEnd();
         }
+=======
+        shipHP = ship.GetComponent<Shiphealth>().currentHealth;
+        shipHPText.text = shipHP.ToString();
+
+        hP = player.GetComponent<Health>().currentHealth;
+        hPText.text = hP.ToString();
+
+        scoreUI.text = score.ToString();
+>>>>>>> Stashed changes:SpaceGame/Assets/Scripts/LevelManager.cs
 
         if(finalScore <= 0)
         {
@@ -68,6 +81,8 @@ public class LevelManager : MonoBehaviour
         }
         
         endScreen.SetActive(true);
+        playerStats.GetComponent<PlayerStats>().AddToPoints(finalScore);
+        playerStats.GetComponent<PlayerStats>().SavePlayer();
         Time.timeScale = 0f;
         scoreText.text = finalScore.ToString();
     }

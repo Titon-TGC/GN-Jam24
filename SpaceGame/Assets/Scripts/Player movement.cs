@@ -6,9 +6,23 @@ public class Playermovement : MonoBehaviour
 {
     public Rigidbody2D body;
     public float movespeed = 5f;
+
+    private float speedAdd;
+    private float newSpeed;
     
     Vector2 Player_move;
     Vector2 Mouse_point;
+
+    private GameObject PlayerStats;
+
+    void Awake()
+    {
+        PlayerStats = GameObject.Find("PlayerStats");
+        speedAdd = PlayerStats.GetComponent<PlayerStats>().upgrade2Level;
+        newSpeed = movespeed + speedAdd;
+        movespeed = newSpeed;
+    }
+
     void Update()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
