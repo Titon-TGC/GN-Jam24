@@ -10,9 +10,17 @@ public class Shooting : MonoBehaviour
 	private GameObject pauseChild;
 	private GameObject levelManager;
 	private GameObject endScreen;
+	public AudioSource audio;
+	public AudioClip shoot;
 
 	
 	public float bulletForce = 20f;
+
+	void Start()
+	{
+		audio = GetComponent<AudioSource>();
+	}
+
     void Update()
     {
 		pauseMenu = GameObject.Find("PauseMenu");
@@ -29,9 +37,9 @@ public class Shooting : MonoBehaviour
 	
 	void Shoot()
 	{
-		
-	GameObject bullet = Instantiate(bulletPrefab, firepoint.position, firepoint.rotation);
-	Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-	rb.AddForce(firepoint.up * bulletForce, ForceMode2D.Impulse);
+		audio.PlayOneShot(shoot);
+		GameObject bullet = Instantiate(bulletPrefab, firepoint.position, firepoint.rotation);
+		Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+		rb.AddForce(firepoint.up * bulletForce, ForceMode2D.Impulse);
 	}
 }
